@@ -8,16 +8,15 @@ public class Ch12Task03 {
 			int a = mf.getMaxFactor();
 			System.out.println(a);
 		} catch (MyException2 e) {
-			// TODO Auto-generated catch block
+			// Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 	}
 }
 
 class MaxFactor {
-	private int a = 0;
-	private int b = 0;
+	private int a;
+	private int b;
 	private int c = -1;
 	
 	MaxFactor(int a, int b) throws MyException2 {
@@ -31,7 +30,7 @@ class MaxFactor {
 	}
 	
 	int getMaxFactor() {
-		int min = (a<b)?a:b;
+		int min = Math.min(a, b);
 		for(int i=min; i>=min/2d; i--) {
 			if((a%i==0) && (b%i==0)) {
 				this.c = i;

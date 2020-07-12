@@ -9,7 +9,7 @@ public class TestTryCatch {
 			System.out.println("test1");
 		}
 		catch (Exception e) {
-			// TODO: handle exception
+			// handle exception
 			System.out.println("test2");
 			e.printStackTrace();
 		}
